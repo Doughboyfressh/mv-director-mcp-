@@ -1,11 +1,25 @@
 {
   "name": "Music Video Director (free cloud server)",
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
-  "hostRequirements": { "cpus": 2 },
+  "hostRequirements": {
+    "cpus": 2
+  },
   "postCreateCommand": "bash .devcontainer/setup.sh",
   "postStartCommand": "bash .devcontainer/start.sh",
-  "forwardPorts": [8000],
+  "forwardPorts": [
+    8000
+  ],
   "portsAttributes": {
-    "8000": { "label": "Music Video Director MCP", "onAutoForward": "silent" }
+    "8000": {
+      "label": "Music Video Director MCP",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "START_HERE.md"
+      ]
+    }
   }
 }

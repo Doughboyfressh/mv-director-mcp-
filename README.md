@@ -1,5 +1,7 @@
 # Music Video Director MCP
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Doughboyfressh/mv-director-mcp-?quickstart=1)
+
 An MCP server that makes Claude your **musical director and finishing editor** for music videos.
 It's built for videographers: you shot to playback, you've got a drive full of takes, and you need a
 cut that sits on the beat, picture that's in sync, and a delivery package that passes platform specs.
