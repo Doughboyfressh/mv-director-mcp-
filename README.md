@@ -1,6 +1,7 @@
 # Music Video Director MCP
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Doughboyfressh/mv-director-mcp-?quickstart=1)
+[![CI](https://github.com/Doughboyfressh/mv-director-mcp-/actions/workflows/ci.yml/badge.svg)](https://github.com/Doughboyfressh/mv-director-mcp-/actions/workflows/ci.yml)
 
 An MCP server that makes Claude your **musical director and finishing editor** for music videos.
 It's built for videographers: you shot to playback, you've got a drive full of takes, and you need a
@@ -46,7 +47,7 @@ sudo apt install ffmpeg
 ```
 
 ```bash
-cd mv-director-mcp
+cd mv-director-mcp-
 pip install -e .            # or: uv pip install -e .
 mv-director                 # starts the server on stdio (Ctrl-C to quit)
 ```

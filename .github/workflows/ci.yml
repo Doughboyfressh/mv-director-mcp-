@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+      - run: pip install -e .
+      - name: Build synthetic song and camera takes
+        run: python tests/make_fixtures.py /tmp/mvfx
+      - name: Run every tool end to end
+        run: python tests/test_e2e.py /tmp/mvfx
+      - name: Talk to the server over MCP stdio
+        run: python tests/test_protocol.py
